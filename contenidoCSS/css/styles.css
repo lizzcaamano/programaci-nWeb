@@ -1,0 +1,89 @@
+/*
+SELECTORES
+
+5. Selector por atributo []
+6. Seleccion por sufijos $
+7. Seleccion por Prefijos ^
+8. Selección de hermanos ~
+9. Desendencia
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*.container{
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    text-align: center;
+    margin: 1%;
+    font-size: 20px; } /*fuente pretederminada es de 16px*/
+
+/*.titulo{
+    border: 4px dotted;
+    text-align: right;
+    padding: 6px;
+    background-color: aqua;
+}
+
+div{
+    border: 5px double;
+}
+*/
+/*Agrupación de selectores*/
+
+/*h2, .secccion, #div1{
+    text-align: right;
+    background-color: blue;
+} 
+*/
+/*[class]{
+    background-color: burlywood;
+}
+
+#div1{
+    background-color: blue;
+}
+
+a[href]{
+    color: aqua;
+    margin-left: 4%;
+    text-align: left;
+}
+*/
+
+/*Seleccion por sufijos*/
+
+/*a[href$="or"]{
+color: pink;
+text-align: center;
+}*/
+
+/*Seleccion por prefijos*/
+
+/*[class^="ca"]{
+    background-color: yellowgreen;
+}*/
+
+
+/*Seleccionando hermanos*/
+
+.seccion ~ div{
+    font-size: 50px;
+}
+
+/*Seleccionado Hijos*/
+
+.container>section{
+    background-color: violet;
+}
+
+.menu ul li>a{
+    color: orange;
+}

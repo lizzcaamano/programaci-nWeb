@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+caption{
+    margin: 5px;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    color: #09343b;
+}
+
+
+table {
+    width: 100%;
+    border: 2px solid coral;
+    
+ }
+
+ th td{
+    width: 12.5%;
+ }
+
+ th{
+    border-bottom: 2px solid coral;
+    border-right: 2px solid coral;
+    padding: 2px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ 
+
+ td{
+    border-bottom: 2px solid #009599;
+    border-right: 2px solid #009599;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+ .hora{
+    border: 2px double #FFA972;
+    padding: 3px;
+    text-align: left;
+}
+
+.clase{
+    background-color: #2CE1E6;
+}
+
+.dormir{
+    background-color: #f5bba0;
+}
+
+.levantarse{
+    background-color: rgb(103, 148, 150);
+}
+
+.bañar{
+    background-color: bisque;
+}
+
+.pendiente{
+    background-color: rgb(245, 179, 168);
+}
+.ir{
+    background-color: aquamarine;
+
+}
+
+.desayunar { 
+    background-color:  rgb(153, 125, 90);
+}
+
+.transporte{
+    background-color: #ffa24b;;
+}
+
+.pausa{
+    background-color: #b8dfff;
+}
+
+.comer{
+    background-color: rgb(252, 252, 181);
+}
+
+.otro{
+    background-color: rgb(255, 207, 217);
+}

@@ -1,0 +1,35 @@
+/*Selector UNIVERSAL*/ *{
+    margin: 0; /*propiedad: valor;*/
+    padding: 0;
+}
+
+/*Selector por ETIQUETA*/ h1{
+    border: 2px double red;
+    margin: 20PX; /**El valor del margin va, norte, sur, este, oeste. Como las manecillas del reloj*/ 
+    padding: 20PX;
+}
+
+div{
+    width: 80%;
+    height: 400px;
+}
+
+img{
+    border: 2px solid pink;
+    image-rendering: pixelated; /*Esta propiedad controla el algoritmo que se utiliza para escalar una imagen.
+    Los dos únicos valores que eceota son crisp-edges y pixelated.
+      */
+
+    width: 40%; /*Siempre pornerlo en porcentaje*/
+    height: 200px; /*Se puede dejar en auto, para que se adpate o poner sus vlaores en pixeles.*/
+    object-fit: scale-down; /*permite dcirle que se escale a su padre*/
+    object-position: top;
+}
+
+#deportes{ /*Selector por ID*/
+    background-color: aqua;
+}
+
+.cultura{ /*selector por CLASS*/
+    background-color: blueviolet;
+}
