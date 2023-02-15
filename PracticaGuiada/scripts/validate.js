@@ -1,8 +1,5 @@
 'use strict';
 
-
-
-
 const validateString = (cad)=>{
     //Ternario -> abreviación del if else
     let response = (cad.length>=3) ? true : false;
@@ -18,6 +15,7 @@ const checkAvg=(value)=>{
     let result = (value>=3 && value<=5) ? "APROBADO" : "REPROBADO";
     return result;
 }
+
 
 
 

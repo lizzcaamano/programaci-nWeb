@@ -1,10 +1,12 @@
 'use strict';
 
 import { validateString,vAvg, checkAvg } from "./validate.js";
-import{ paintCard, addStudent, modalAlert} from "./paint.js";
+import{ paintCard, addStudent, modalAlert, camposxRol, addProfe} from "./paint.js";
 
 const btnAgregar = document.querySelector('#btnAgregar');
 const btnMostrar= document.querySelector('#btnMostrar');
+const seleccionRol = document.querySelector('#opcion');
+const formu = document.querySelector('#form') 
 
 
 /* GENERAR EVENTOS
@@ -30,30 +32,64 @@ btnMostrar.addEventListener("click", function (){
  });
 */
 
+seleccionRol.onclick = function(){
+    const tip = document.getElementById('opcion').value;
+    console.log(tip);
+    camposxRol(tip);
+}
 
- btnAgregar.onclick = function(){
-    const name = document.getElementById('nombre').value;
-    const lastName = document.getElementById('apellido').value;
-    const avg = parseFloat(document.getElementById('promedio').value);
+
+
+
+    btnAgregar.onclick = function(){
+        const op = document.getElementById('opcion').value;
+        if(op == "estudiante"){
+            const name = document.getElementById('nombre').value;
+            const lastName = document.getElementById('apellido').value;
+            const avg = parseFloat(document.getElementById('promedio').value);
+            console.log(`${name} ${lastName} ${avg} ${op}`);
+            if(validateString(name) && validateString(lastName) && op == "estudiante"){
+                if((!isNaN(avg)) && (vAvg(avg))){
+                    addStudent(name, lastName, avg);
+                    modalAlert("Se agregó el Estudiante");
+
+                }else{
+                    document.querySelector('#promedio').value="";
+                    modalAlert("Promedio Inválido");
+                }
+            }else{
+                modalAlert("Datos inválidos, revisar los datos");
+    
+            }
+        }if(op == "profesor"){
+            const name = document.getElementById('nombre').value;
+            const lastName = document.getElementById('apellido').value;
+            const especialidad = document.getElementById('especialidad').value;
+            console.log(`${name} ${lastName} ${especialidad} ${op}`);
+            if(validateString(name) && validateString(lastName) &&  validateString(especialidad) && op == "profesor"){
+                addProfe(name,lastName,especialidad);
+                modalAlert("Se agregó el Profesor")
+            }else{
+                modalAlert("Datos inválidos, revisar los datos");
+            }
+        }
+
+        
+     }
+
+     //formu.reset();
+     //console.log(`${name} ${lastName} ${avg} ${op}`);
+
+    btnMostrar.addEventListener("click", function (){
+
     const op = document.getElementById('opcion').value;
 
-    //console.log(`${name}, `);
-
-    if(validateString(name) && validateString(lastName) && op !=0){
-        if((!isNaN(avg)) && (vAvg(avg))){
-            addStudent(name, lastName, avg);
-            modalAlert("Se agregó el Estudiante");
-        }else{
-            document.querySelector('#promedio').value="";
-            modalAlert("Promedio Inválido");
-        }
-    }else{
-        modalAlert("Datos inválidos, revisar los datos");
+    if(op == "estudiante"){
+        paintCard("ESTUDIANTE");
+    }if(op == "profesor"){
+        paintCard("PROFESOR");
     }
- }
- 
- btnMostrar.addEventListener("click", function (){
-    paintCard("ESTUDIANTE");
+    
  });
  
  /*

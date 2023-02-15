@@ -20,7 +20,7 @@
 
     </header>
     
-    <form class="form">
+    <form id="form" class="form">
         <h2>Registro</h2>
         <label for="opcion">Escoja su rol:</label>
         <select class="control-s" name="opcion" id="opcion">
@@ -48,10 +48,11 @@
         type="text"                    
         required
         />
-        
-        <template class="soyEstudiante">
-        <label for="promedio">Promedio:</label>
+    
+        <!-- <template id="mostrarProme"> -->
+        <label id="labelProm" for="promedio" style="display: none;">Promedio:</label>
         <input
+            style="display: none;"
             class="control"
             id="promedio"
             name="promedio"
@@ -59,11 +60,12 @@
             type="number"                    
             required
         />
-    </template>
-
-    <template class="soyProfesor">
-        <label for="especialidad">Especialidad:</label>
+        <!--</template>-->
+    
+        <!--<template id="mostrarEspe"> -->
+        <label id="labelEsp" for="especialidad" style="display: none;">Especialidad:</label>
         <input
+            style="display: none;"
             class="control"
             id="especialidad"
             name="especialidad"
@@ -71,11 +73,13 @@
             type="text"                    
             required
         />
-    </template>
+        <!--</template>-->
+   
         
         <button type="button" class="btn"  id="btnAgregar">Agregar</button>
         <button type="button" class="btn" id="btnMostrar">Mostrar</button>
     </form>
+    
     <section class="allCards">
         <div class="cardsEstudiantes" id="cardsEstudiantes"></div>
         <div class="" id="cardseProfesores"></div>
@@ -92,9 +96,9 @@
     </template>
     <template id="templateProfesor">      
             <div class="card-body">
-                <h3>Nombre</h3>
-                <h6>Profesion</h6>
-                <p class="lead">Edad</p>
+                <h3 class="titulo"></h3>
+                <h4 class="datos"></h4>
+                <p class="text-expecialidad text-promedio"></p>
             </div>       
     </template>
 
