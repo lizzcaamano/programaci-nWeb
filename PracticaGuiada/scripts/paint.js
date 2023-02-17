@@ -11,15 +11,20 @@ const camposxRol = (tip) =>{
 
     switch (tip){
         case "estudiante": 
+        //Muestra campos
         document.getElementById("labelProm").style.display="inline-block";
         document.getElementById("promedio").style.display="inline-block";
+        //Quita campos
         document.getElementById("labelEsp").style.display="none";
         document.getElementById("especialidad").style.display="none";
+        document.getElementById("edad").style.display="none"
         break;
         case "profesor": 
         //Muestra campos
         document.getElementById("labelEsp").style.display="inline-block";
         document.getElementById("especialidad").style.display="inline-block";
+        document.getElementById("labelEdad").style.display="inline-block";
+        document.getElementById("edad").style.display="inline-block";
         //Quita campos
         document.getElementById("labelProm").style.display="none";
         document.getElementById("promedio").style.display="none";
@@ -29,6 +34,7 @@ const camposxRol = (tip) =>{
         document.getElementById("promedio").style.display="none";
         document.getElementById("labelEsp").style.display="none";
         document.getElementById("especialidad").style.display="none";
+        document.getElementById("edad").style.display="none";
     }
     
 }
@@ -40,26 +46,30 @@ const paintCard = (typ) =>{
     const templateProfe = document.querySelectorAll('#templateProfesor').content;
     
     switch (typ){
+        case "PROFESOR":
+            for(let i of profes){
+                const cloneTemp = templateProfe.cloneNode(true);
+                console.log(cloneTemp);
+                cloneTemp.querySelector('.titulo').innerHTML = '<strong> Datos Profesor </strong>';
+                cloneTemp.querySelector('.datos').innerHTML = `<i>${i.nombre.toUpperCase()} ${i.apellido.toUpperCase()}</i>`;
+                cloneTemp.querySelector('.edad').innerHTML = `Edad: ${i.age}`;
+                cloneTemp.querySelector('text-expecialidad') = `Especialidad: <strong> ${i.especi}</strong>`;
+                fragment.appendChild(cloneTemp);
+            }
+        break;
+
         case "ESTUDIANTE":
             for(let i of students){
                 const cloneTemp = templateEstudent.cloneNode(true);
                 console.log(cloneTemp);
                 cloneTemp.querySelector('.title-card').innerHTML = "Datos del <i>Estudiante</i>";
-                cloneTemp.querySelector('.data-card').innerHTML = `NOMBRE: ${i.nom.toUpperCase()}  ${i.ape.toUpperCase()} `;
-                cloneTemp.querySelector('.text-promedio').innerHTML=`PROMEDIO: ${i.prom}`;
+                cloneTemp.querySelector('.data-card').innerHTML = `${i.nom.toUpperCase()}  ${i.ape.toUpperCase()} `;
+                cloneTemp.querySelector('.text-promedio').innerHTML=`Pomedio: ${i.prom}`;
                 cloneTemp.querySelector('.text-aprobado').innerHTML = `${checkAvg(i.prom)}`;
                 fragment.appendChild(cloneTemp);
             }
         break;
-        case "PROFESOR":
-        for(let i of profes){
-            const cloneTemPro = templateProfe.cloneNode(true);
-            console.log(cloneTemPro);
-            cloneTemPro.querySelector('.titulo').innerHTML = '<strong> Datos Profesor </strong>';
-            cloneTemPro.querySelector('.datos').innerHTML = `<i>${i.nombre.toUpperCase()} ${i.apellido.toUpperCase()}</i> ` ;
-            cloneTemPro.querySelector('text-expecialidad') = ` Especialidad: <strong> ${i.especi}</strong>'`;
-            fragment.appendChild(cloneTemPro);
-        }
+        
 
     }
 
@@ -79,14 +89,17 @@ const addStudent=(name, lastName, avg)=>{
 };
 
 //OBJETO PARA GUARDAR DATOS DEL PROFESOR
-const addProfe=(nomb, apell,espe)=>{
+const addProfe=(nomb, apell,espe, age)=>{
     let prof = {
         nombre: nomb,
         apellido: apell,
-        especi: espe
+        especi: espe,
+        edad: age
     }
     profes.push(prof);
+    console.info(profes)
 };
+
 
 const modalAlert=(cad)=>{ 
     //console.log(cad);

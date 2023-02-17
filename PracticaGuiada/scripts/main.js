@@ -61,33 +61,43 @@ seleccionRol.onclick = function(){
                 modalAlert("Datos inválidos, revisar los datos");
     
             }
+            
+
         }if(op == "profesor"){
             const name = document.getElementById('nombre').value;
             const lastName = document.getElementById('apellido').value;
             const especialidad = document.getElementById('especialidad').value;
+            const edad= document.getElementById('edad').value;
             console.log(`${name} ${lastName} ${especialidad} ${op}`);
             if(validateString(name) && validateString(lastName) &&  validateString(especialidad) && op == "profesor"){
-                addProfe(name,lastName,especialidad);
+                addProfe(name,lastName,especialidad, edad);
                 modalAlert("Se agregó el Profesor")
             }else{
                 modalAlert("Datos inválidos, revisar los datos");
             }
+            
         }
-
         
+            document.querySelector('#nombre').value="";
+            document.querySelector('#apellido').value="";
+            document.querySelector('#promedio').value="";
+            document.querySelector('#edad').value="";
+            document.querySelector('#especialidad').value="";
      }
 
+            
      //formu.reset();
      //console.log(`${name} ${lastName} ${avg} ${op}`);
 
     btnMostrar.addEventListener("click", function (){
 
     const op = document.getElementById('opcion').value;
-
+    
+    if(op == "profesor"){
+        paintCard("PROFESOR");
+    }
     if(op == "estudiante"){
         paintCard("ESTUDIANTE");
-    }if(op == "profesor"){
-        paintCard("PROFESOR");
     }
     
  });

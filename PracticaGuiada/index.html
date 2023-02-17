@@ -63,6 +63,16 @@
         <!--</template>-->
     
         <!--<template id="mostrarEspe"> -->
+        <label id="labelEdad" for="edad" style="display: none;">Edad:</label>
+        <input
+            style="display: none;"
+            class="control"
+            id="edad"
+            name="edad"
+            placeholder="Ingrese su edad"
+            type="number"                    
+            required
+        />
         <label id="labelEsp" for="especialidad" style="display: none;">Especialidad:</label>
         <input
             style="display: none;"
@@ -96,8 +106,9 @@
     </template>
     <template id="templateProfesor">      
             <div class="card-body">
-                <h3 class="titulo"></h3>
-                <h4 class="datos"></h4>
+                <h3 class="titulo title-card"></h3>
+                <h4 class="datos data-card"></h4>
+                <h4 class="edad data-card"></h4>
                 <p class="text-expecialidad text-promedio"></p>
             </div>       
     </template>
