@@ -34,7 +34,6 @@ btnMostrar.addEventListener("click", function (){
 
 seleccionRol.onclick = function(){
     const tip = document.getElementById('opcion').value;
-    console.log(tip);
     camposxRol(tip);
 }
 

@@ -6,35 +6,36 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
+    padding: 0.1px;
 }
 .header{
-    background: #f25757;
-    background: linear-gradient(212deg, rgba(242,87,87,1) 10%, #f2db63 26%, #f22e76 50%, #f2b366 100%);
+    background: #ce57f2;
+    background: linear-gradient(212deg, rgb(198, 87, 242) 10%, #f25757  26%,#6371f2  50%, #2ef2d1 100%);
     width: 100vw;
-    height: calc(100vh - 500px);
+    height: calc(100vh - 550px);
     text-align: center;
     overflow: hidden;
     margin: 0 auto; /*Tip: Es para centrar los elementos*/
     background-attachment: fixed;
     position: relative;
-    
 }
 .header>img{
-    width: 50%;
-    height: 180px;
-    margin-top: 5%;
+    width: 20%;
+    height: 120px;
+    margin-top: 3%;
 }
 .ola{
     position: absolute;
     bottom: 0;
     width: 100vw;
+    padding: 0.1px;
 }
 .form{
     width: 50%;
     height: auto;
     margin: 5% auto;
     border-radius: 10px;
-    border: 4px solid #3C3D59;
+    border: 4px solid #6e00ad;
     padding: 25px 10px;
     text-align: center;
 }
@@ -47,41 +48,48 @@ body{
 .form>input{
     padding: 10px 2px;
     border: none;
-    border-bottom: 1px solid #f25757;
+    border-bottom: 1px solid #6371f2;
     outline: none;
+    border-radius: 5px;
 }
 .form>label{
     text-align: left;
     padding: 5px;
 }
 
-.contol-s{
+.control-s{
     margin-top: 2%;
-    border: 1px solid #f25757;
+    border: 1px solid #fff;
     padding: 8px;
+    outline: none;
+    border-radius: 7px;
+    border-bottom:1px solid #6371f2;
+    cursor: pointer;
+    
 }
 .btn{
-    background: #f22e76;
-    background: linear-gradient(top, #f22e76, #f25757);
-    background: linear-gradient(to bottom, #f22e76, #f25757);
+    background: #ce57f2;
+    background: linear-gradient(top, #ce57f2, #6371f2);
+    background: linear-gradient(to bottom, #ce57f2, #6371f2);
     border-radius: 28px;
     color: #fff;
     font-size: 20px;
     padding: 10px 20px;
-    border: 2px solid #f2b366;
+    border: 2px solid #ce57f2;
     text-decoration: none;
 }
 .btn:hover{
-    background: #f2db63;
-    background:linear-gradient(top, #f2db63, #f2b366);
-    background: linear-gradient(to bottom, #f2db63, #f2b366);
+    background: #6371f2;
+    background:linear-gradient(to top, #ce57f2, #6371f2);
+    background: linear-gradient(to bottom, #ce57f2, #d769ff);
     text-decoration: none;
 }
 .card{
     width: 50%;
     margin: 5% auto;
-    border: 2px solid #f22e76;
+    border: 5px double #6e00ad;
     text-align: center;
+    border-radius: 10px;
 }
 .title-card{
     padding: 2%;
@@ -95,24 +103,24 @@ body{
     padding: 2% 0;
 }
 .card .btnRegistrar{
-    background: #f2db63;
-    background:linear-gradient(top, #f2db63, #f2b366); 
-    background: linear-gradient(to bottom, #f2db63, #f2b366);
+    background: #ce57f2;
+    background: linear-gradient(to top, #ce57f2, #6371f2);
+    background: linear-gradient(to bottom, #ce57f2, #d769ff);
     border-radius: 24px;
     padding: 2%;
-    border: 1px solid #f22e76;
+    border: 1px solid #6371f2;
 }
 .alerta{
     width: 25%;
     height: 100px;
-    background-color: #f25757;
     position: fixed;
     top: 35%;
     left: 35%;
     margin: 0 auto;
     text-align: center;
-    border-radius: 7%;
-    border: 2px solid #3C3D59;
+    border-radius: 10px;
+    border: 2px solid #6e00ad;
+    background-color: #d769ffc2;
 }
 .textAlerta{
     width: 100%;
@@ -127,11 +135,19 @@ body{
     right: 0;
     top: 0;
 }
+
+/*Ocultando y mostrando campos*/
+.estoy-oculto{
+    display: none !important;
+}
+.estoy-visible{
+    display: inline-block;
+}
+
 @media screen and (max-width: 760px){
     .form{
         width: 60%;
         margin: 2%;
-        border: 2px solid #f2b366;
         padding: 15px 5px;
     }
 }
@@ -140,7 +156,6 @@ body{
     .form{
         width: 70%;
         margin: 1% auto 3% auto;
-        border: 1px solid #f2b366;
         padding: 15px 5px;
     }
     .form>input,label,button,select{

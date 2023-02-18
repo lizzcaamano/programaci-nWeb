@@ -3,7 +3,7 @@
 * EFECTO BUSCADOR
  */
 const buscando = document.querySelector('#buscando');
-const inputBuscar = document.querySelector('input_buscar');
+const inputBuscar = document.querySelector('#input_buscar');
 
 buscando.addEventListener('click', ()=>{
     if(inputBuscar.classList.contains('buscarOculto')){

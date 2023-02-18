@@ -16,12 +16,12 @@
         <img  src="./img/education_f8ru.svg" alt="educación">
         <h1>Universidad Uniempresarial</h1>
         
-        <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.00,49.85 C150.00,149.60 349.20,-49.85 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
+        <div class="ola" style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; padding: 0.1px;"><path d="M-0.00,49.85 C150.00,149.60 349.20,-49.85 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
 
     </header>
     
     <form id="form" class="form">
-        <h2>Registro</h2>
+        <h2>REGRISTRO</h2>
         <label for="opcion">Escoja su rol:</label>
         <select class="control-s" name="opcion" id="opcion">
             <option value="0" selected>Seleccione una opción</option>
@@ -50,10 +50,9 @@
         />
     
         <!-- <template id="mostrarProme"> -->
-        <label id="labelProm" for="promedio" style="display: none;">Promedio:</label>
+        <label id="labelProm" class="estoy-oculto" for="promedio">Promedio:</label>
         <input
-            style="display: none;"
-            class="control"
+            class="estoy-oculto control"
             id="promedio"
             name="promedio"
             placeholder="Ingrese su promedio"
@@ -63,20 +62,18 @@
         <!--</template>-->
     
         <!--<template id="mostrarEspe"> -->
-        <label id="labelEdad" for="edad" style="display: none;">Edad:</label>
+        <label id="labelEdad" class="estoy-oculto" for="edad">Edad:</label>
         <input
-            style="display: none;"
-            class="control"
+            class="control estoy-oculto"
             id="edad"
             name="edad"
             placeholder="Ingrese su edad"
             type="number"                    
             required
         />
-        <label id="labelEsp" for="especialidad" style="display: none;">Especialidad:</label>
+        <label id="labelEsp" class="estoy-oculto"  for="especialidad">Especialidad:</label>
         <input
-            style="display: none;"
-            class="control"
+            class="control estoy-oculto"
             id="especialidad"
             name="especialidad"
             placeholder="Ingrese su especialidad"
@@ -105,11 +102,11 @@
             </div>       
     </template>
     <template id="templateProfesor">      
-            <div class="card-body">
+            <div class="card">
                 <h3 class="titulo title-card"></h3>
                 <h4 class="datos data-card"></h4>
                 <h4 class="edad data-card"></h4>
-                <p class="text-expecialidad text-promedio"></p>
+                <p class="text-especialidad text-promedio"></p>
             </div>       
     </template>
 
