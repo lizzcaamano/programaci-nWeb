@@ -34,15 +34,6 @@ const camposxRol = (tip) =>{
 
         }
        
-       /** 
-        //Muestra campos
-        document.getElementById("labelProm").style.display="inline-block";
-        document.getElementById("soy-estudiante").style.display="inline-block";
-        //Quita campos
-        document.getElementById("labelEsp").style.display="none";
-        document.getElementById("especialidad").style.display="none";
-        document.getElementById("edad").style.display="none"
-        */
         break;
         case "profesor": 
         const inputEdad = document.getElementById("edad");
@@ -76,16 +67,6 @@ const camposxRol = (tip) =>{
             inputEspecialidad.classList.add("estoy-oculto");
         }
 
-        //Muestra campos
-        /** 
-        document.getElementById("labelEsp").style.display="inline-block";
-        document.getElementById("especialidad").style.display="inline-block";
-        document.getElementById("labelEdad").style.display="inline-block";
-        document.getElementById("edad").style.display="inline-block";
-        //Quita campos
-        document.getElementById("labelProm").style.display="none";
-        document.getElementById("promedio").style.display="none";
-        */
         break;
         default: 
         const labelPromedio2 = document.getElementById("labelProm");
@@ -109,13 +90,6 @@ const camposxRol = (tip) =>{
         labelPromedio2.classList.add('estoy-oculto');
         inputPromedio2.classList.add('estoy-oculto');
          break;   
-        /*
-        document.getElementById("labelProm").style.display="none";
-        document.getElementById("promedio").style.display="none";
-        document.getElementById("labelEsp").style.display="none";
-        document.getElementById("especialidad").style.display="none";
-        document.getElementById("edad").style.display="none";
-        */
     }
     
 }
