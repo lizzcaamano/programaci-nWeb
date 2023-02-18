@@ -106,7 +106,7 @@ const paintCard = (typ) =>{
                 
                 cloneTempProf.querySelector('.titulo').innerHTML = '<strong> Datos Profesor </strong>';
                 cloneTempProf.querySelector('.datos').innerHTML = `${i.nombre.toUpperCase()} ${i.apellido.toUpperCase()}`;
-                cloneTempProf.querySelector('.edad').innerHTML = `Edad: ${i.age}`;
+                cloneTempProf.querySelector('.edad').innerHTML = `Edad: ${i.edad}`;
                 cloneTempProf.querySelector('.text-especialidad').innerHTML = `Especialidad: <strong> ${i.especi}</strong>`;
                 fragmentProf.appendChild(cloneTempProf);
             }
